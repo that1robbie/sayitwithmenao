@@ -1,7 +1,7 @@
 const nameList =[
+                "F-A-M-I-L-Y.flac",
                 "Halo Theme.flac", 
                 "Its Modelo time fool.flac",
-                "LITERALLYNOIDEA.flac",
                 "Marijuana.flac",
                 "Namaste my brother.flac",
                 "Snyper Ryfle.flac",
@@ -11,10 +11,7 @@ const nameList =[
 var grid = document.getElementById("main-grid");
 
 window.addEventListener( ("load"), (e) => {
-  var tileList = makeAllTiles(e);
-  
-    // var fullPath = document.getElementById('upload');
-    // console.log(fullPath);
+    makeAllTiles(e);   
 });
 
 function makeAllTiles(e) {
@@ -34,6 +31,7 @@ function makeTile(title,filename) {
 
     var img = new Image();
     img.src = 'waldo.jpg';
+    img.className = "img-button";
 
     var noise = new Audio();
     noise.src = filename;
